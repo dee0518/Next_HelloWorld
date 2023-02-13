@@ -58,6 +58,7 @@ const Home: NextPage = () => {
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
+        <div> 테스트용 </div>
       </footer>
     </div>
   );
