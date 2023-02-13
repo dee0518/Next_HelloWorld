@@ -8,7 +8,9 @@
     "start": "next start",
     "test": "jest --watch",
     "test:ci": "jest --ci",
-    "postinstall": "husky install && npx husky add .husky/pre-commit \"npx lint-staged -q\""
+    "postinstall": "husky install && npx husky add .husky/pre-commit \"npx lint-staged -q\"",
+    "format": "prettier --cache --write .",
+    "lint": "eslint --cache ."
   },
   "dependencies": {
     "babel-jest": "^29.4.2",
