@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Hello World!</a>
         </h1>
 
         <p className={styles.description}>
@@ -59,6 +59,7 @@ const Home: NextPage = () => {
           </span>
         </a>
       </footer>
+      <div>테스트용</div>
     </div>
   );
 };
