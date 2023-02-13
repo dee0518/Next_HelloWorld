@@ -1,20 +1,7 @@
-/**
- * 로그인
- * 1. 로그인 버튼을 클릭 할 때
- *  1-1. 이메일이 입력 되었을 때.
- *    1-1-1. 이메일이 유효할 때.
- *      1-1-1-1. 비밀번호가 유효할 때
- *        - 로그인에 성공한다.
- *      1-1-1-2. 비밀번호가 유효하지 않을 때
- *        - 비밀번호 유효성 체크 요망 메시지 표시
- *    1-1-2. 이메일이 유효하지 않을 때
- *      1-1-2-1. 이메일 유효성 실패 문구 보여주기
- *  1-2. 이메일이 입력되지 않았을 때
- *    1-2-1. 이메일을 입력 요망 메시지 보여주기.
- *  * =====================================
- *  2. 회원가입 페이지 이동 버튼을 클릭 할 때
- *
- */
+import { fireEvent, render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import context from 'jest-plugin-context';
+import SignIn from './index';
 
 /**
  * 로그인
@@ -41,8 +28,18 @@
 describe('signin', () => {
   context('1. 이메일을 입력일 때', () => {
     context('1-1. 이메일이 유효할 때', () => {
-      it('이메일 validation 값이 true인가', () => {});
+      it('이메일 validation 값이 true인가', async () => {
+        render(<SignIn />);
+        const emailInput = screen.getByLabelText('이메일');
+        console.log('⭐️⭐️⭐️⭐️⭐️', (emailInput as HTMLInputElement).value);
+        await userEvent.type(emailInput, 'abc@email.com');
+        console.log('⭐️⭐️⭐️⭐️⭐️', (emailInput as HTMLInputElement).value);
+        const { value } = emailInput as HTMLInputElement;
+        // expect(value).toBe('abc@email.com');
+        expect(value).toMatch(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+      });
     });
+
     // context('1-2. 이메일이 유효하지 때', () => {
     //   it('이메일 validation 값이 false인가', () => {})
     //   it('이메일 유효성 에러 메시지가 표시되는가', () => {}),
@@ -50,8 +47,19 @@ describe('signin', () => {
   });
   context('2. 패스워드 입력일 때', () => {
     context('2-1. 패스워드가 유효할 때', () => {
-      it('패스워드가 유효하다', () => {
-        // expect() 패스워드 유효성 여부값 true, 패스워드 입력여부 값 true
+      it('패스워드가 유효하다', async () => {
+        render(<SignIn />);
+
+        const passwordInput = screen.getByLabelText('비밀번호');
+
+        // fireEvent.change(passwordInput, { target: { value: '1q2w3e4r!Q' } });
+
+        await userEvent.type(passwordInput, '1q2w3e4r!Q');
+        // expect((passwordInput as HTMLInputElement).value).not.toHaveLength(0);
+
+        expect((passwordInput as HTMLInputElement).value).toMatch(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/
+        );
       });
     });
     context('2-2. 패스워드가 유효하지 않을 때', () => {
@@ -70,9 +78,9 @@ describe('signin', () => {
     });
   });
 
-  // context(('4. 회원가입 버튼 클릭') => {
-  //   it('4-1. 회원가입 패이지로 이동한다', () => {
-  //     // expect() 페이지 이동
-  //   })
-  // })
+  context('4. 회원가입 버튼 클릭', () => {
+    it('4-1. 회원가입 패이지로 이동한다', () => {
+      // expect() 페이지 이동
+    });
+  });
 });
