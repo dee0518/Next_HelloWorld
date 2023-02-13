@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import context from 'jest-plugin-context';
 import SignIn from './index';
@@ -31,11 +31,8 @@ describe('signin', () => {
       it('이메일 validation 값이 true인가', async () => {
         render(<SignIn />);
         const emailInput = screen.getByLabelText('이메일');
-        console.log('⭐️⭐️⭐️⭐️⭐️', (emailInput as HTMLInputElement).value);
         await userEvent.type(emailInput, 'abc@email.com');
-        console.log('⭐️⭐️⭐️⭐️⭐️', (emailInput as HTMLInputElement).value);
         const { value } = emailInput as HTMLInputElement;
-        // expect(value).toBe('abc@email.com');
         expect(value).toMatch(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
       });
     });

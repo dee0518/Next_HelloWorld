@@ -3,14 +3,14 @@
 
 name: Next_HelloWorld - Test CI
 
-test:
+on:
   push:
     branches: ['main']
   pull_request:
     branches: ['develop']
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     strategy:
