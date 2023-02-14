@@ -30,6 +30,9 @@
   },
   "plugins": ["react", "@typescript-eslint", "testing-library"],
   "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
     "no-useless-escape": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
