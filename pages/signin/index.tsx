@@ -1,9 +1,12 @@
-import Button from '@/components/common/Button';
-import Input from '@/components/common/Input';
-import Title from '@/components/layout/Title';
 import { ChangeEvent, useState } from 'react';
+// import Header from '@/components/common/Header/Header';
+import Title from '@/components/layout/Title';
+import Wrapper from '@/components/common/Wrapper/Wrapper';
+import Input from '@/components/common/Input/Input';
+import Button from '@/components/common/Button/Button';
 import styled from 'styled-components';
 import { flexbox } from '@/styles/mixin';
+import theme from '@/styles/theme';
 import { EMAIL_REG, PASSWORD_REG } from '@/constants/RegularExpression';
 
 const SignIn = () => {
@@ -18,39 +21,60 @@ const SignIn = () => {
   };
 
   return (
-    <Form>
+    <SignInWrapper uiType="container" width="600px" height="800px" background={theme.dimmedWhite} hasBoxShadow={false}>
+      {/* <Header /> */}
       <Title />
-      <p id="error" />
-      <Input
-        id="email"
-        label="이메일"
-        name="email"
-        type="text"
-        value={signIn.email}
-        onChange={onChange}
-        isValid={EMAIL_REG.test(signIn.email)}
-        validationMsg="아이디 형식에 맞게 입력해주세요."
-      />
-      <Input
-        id="password"
-        label="비밀번호"
-        name="password"
-        type="password"
-        value={signIn.password}
-        onChange={onChange}
-        isValid={PASSWORD_REG.test(signIn.password)}
-        validationMsg="비밀번호 형식에 맞게 입력해주세요."
-      />
-      <Button />
-    </Form>
+      <Form>
+        <Input
+          id="email"
+          name="email"
+          type="text"
+          label="이메일"
+          value={signIn.email}
+          onChange={onChange}
+          uiType="default"
+          placeholder="이메일"
+          isValid={EMAIL_REG.test(signIn.email)}
+          error="아이디 형식에 맞게 입력해주세요."
+        />
+        <Input
+          id="password"
+          name="password"
+          type="password"
+          label="비밀번호"
+          value={signIn.password}
+          onChange={onChange}
+          uiType="default"
+          placeholder="비밀번호"
+          isValid={PASSWORD_REG.test(signIn.password)}
+          error="비밀번호 형식에 맞게 입력해주세요."
+        />
+      </Form>
+
+      <Button
+        background="#464B68"
+        color="#ffffff"
+        onClick={() => {
+          alert('로그인 성공');
+        }}
+      >
+        로그인
+      </Button>
+    </SignInWrapper>
   );
 };
 
 export default SignIn;
 
+const SignInWrapper = styled(Wrapper)`
+  ${flexbox('column', 'nowrap', 'center')}
+  gap: 80px;
+  margin: 100px auto;
+  padding: 50px 80px;
+`;
+
 const Form = styled.form`
-  ${flexbox('column')}
-  gap: 30px;
-  width: 500px;
-  margin: 80px auto;
+  ${flexbox('column', 'nowrap')}
+  gap: 15px;
+  width: 100%;
 `;

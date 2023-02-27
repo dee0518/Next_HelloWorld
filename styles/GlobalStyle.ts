@@ -13,6 +13,11 @@ ${normalize}
   ul, li {
     list-style : none;
   }
+
+  button {
+    border: none;
+    cursor: pointer;
+  }
 `;
 
 export default GlobalStyles;

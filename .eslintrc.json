@@ -44,6 +44,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "react/require-default-props": ["off"],
     "react/display-name": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-var-requires": "off",

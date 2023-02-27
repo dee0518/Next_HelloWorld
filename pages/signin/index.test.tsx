@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import context from 'jest-plugin-context';
 import React from 'react';
-import { PASSWORD_REG } from '@/constants/RegularExpression';
+import { EMAIL_REG, PASSWORD_REG } from '@/constants/RegularExpression';
 import SignIn from '@/pages/signin/index';
 
 /**
@@ -41,6 +41,7 @@ describe('signin', () => {
 
         // const { value } = emailInput as HTMLInputElement;
         // expect(setStateMock).toHaveBeenCalledWith('abc@email.com');
+        expect((emailInput as HTMLInputElement).value).toMatch(EMAIL_REG);
       });
     });
 
