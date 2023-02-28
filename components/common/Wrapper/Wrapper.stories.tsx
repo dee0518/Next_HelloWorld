@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { userEvent } from '@storybook/testing-library';
+import React from 'react';
 import theme from '../../../styles/theme';
 import Wrapper from './Wrapper';
 
@@ -11,10 +11,6 @@ export default {
 
 const Template: ComponentStory<typeof Wrapper> = args => <Wrapper {...args} />;
 
-const onClick = () => {
-  alert('hello');
-};
-
 export const Card = Template.bind({});
 Card.args = {
   uiType: 'card',
@@ -22,13 +18,8 @@ Card.args = {
   height: '80px',
   background: theme.black,
   hasBoxShadow: true,
-  // onClick,
   children: <div>Hello</div>,
 };
-// Card.play =async ({canvasElement}) => {
-//   const canvas =within(canvasElement);
-//   await userEvent.click(canvas.getByText)
-// }
 
 export const Container = Template.bind({});
 Container.args = {
@@ -36,7 +27,6 @@ Container.args = {
   width: '200px',
   height: '80px',
   hasBoxShadow: true,
-  // onClick,
   children: 'hello',
 };
 export const Circle = Template.bind({});
@@ -45,6 +35,5 @@ Circle.args = {
   width: '80px',
   height: '80px',
   hasBoxShadow: true,
-  // onClick,
   children: 'hello',
 };
