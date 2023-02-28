@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { flexbox } from '@/styles/mixin';
 import ModalHeader from './ModalHeader';
 import ModalButtons from './ModalButtons';
-import ModalMakeItinerary from './ModalMakeItinerary';
+// import ModalMakeItinerary from './ModalMakeItinerary';
+import ModalEditItinerary from './ModalEditItinerary';
 
 const ModalContainer = () => {
   return (
     <Container>
       <ModalHeader />
-      <ModalMakeItinerary />
+      {/* <ModalMakeItinerary /> */}
+      <ModalEditItinerary />
       <ModalButtons />
     </Container>
   );

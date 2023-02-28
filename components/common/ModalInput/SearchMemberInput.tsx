@@ -33,11 +33,12 @@ export default SearchMemberInput;
 
 const SearchContainer = styled.div`
   ${flexbox('row')}
+
   border-bottom: 1px solid ${({ theme }) => theme.gray200};
 `;
 const SearchInput = styled.input`
   width: 100%;
-  padding: 10px;
+  padding: 5px 0 0 10px;
   border: none;
   &::placeholder {
     color: ${({ theme }) => theme.gray200};

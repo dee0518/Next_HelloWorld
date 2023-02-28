@@ -32,9 +32,10 @@ const DateTIme = (props: IProps) => {
 export default DateTIme;
 
 const DateTimeConatiner = styled.div`
-  ${flexbox('row')}
-  border-bottom: 1px solid ${({ theme }) => theme.gray200};
   width: 210px;
+  border-bottom: 1px solid ${({ theme }) => theme.gray200};
+  margin: 20px 0;
+  ${flexbox('row')}
 `;
 const DateInput = styled.input`
   width: 170px;
