@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { flexbox } from '@/styles/mixin';
-import DestinationInfo from '@/components/common/ModalComponents/DestinationInfo';
-import DateTime from '@/components/common/ModalInput/DateTime';
 // import AddedMember from '@/components/common/ModalComponents/AddedMember';
 // import Calendar from '@/assets/common/calendarIcon.png';
-import { Icon } from '@/types/common/icon';
 import Calendar from '@/assets/common/calendarIcon.png';
 import Clock from '@/assets/common/clockIcon.png';
 import Search from '@/assets/common/searchIcon.png';
+import DateTime from '@/components/common/ModalInput/DateTime';
+import DestinationInfo from '@/components/common/ModalComponents/DestinationInfo';
+import { Icon } from '@/types/common/icon';
 import SearchMemberInput from '../ModalInput/SearchMemberInput';
 // import Profile from '../../../public/assets/common/profile.png';
 
