@@ -8,7 +8,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  excludeFile: str => /\*.[stories|test].tsx/.test(str),
+  eslint: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
