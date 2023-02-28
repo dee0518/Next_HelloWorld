@@ -5,11 +5,11 @@ import DestinationInfo from '@/components/common/ModalComponents/DestinationInfo
 import DateTime from '@/components/common/ModalInput/DateTime';
 // import AddedMember from '@/components/common/ModalComponents/AddedMember';
 // import Calendar from '@/assets/common/calendarIcon.png';
+import { Icon } from '@/types/common/icon';
 import Calendar from '@/assets/common/calendarIcon.png';
 import Clock from '@/assets/common/clockIcon.png';
 import Search from '@/assets/common/searchIcon.png';
 import SearchMemberInput from '../ModalInput/SearchMemberInput';
-import { Icon } from '@/types/common/icon';
 // import Profile from '../../../public/assets/common/profile.png';
 
 const ModalEditItinerary = () => {
