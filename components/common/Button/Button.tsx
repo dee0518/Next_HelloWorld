@@ -1,13 +1,14 @@
 import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { Icon } from '@/types/common/icon';
 
-type Icon = {
-  src: string;
-  alt: string;
-  width: number;
-  height?: number;
-};
+// type Icon = {
+//   src: string;
+//   alt: string;
+//   width: number;
+//   height?: number;
+// };
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
