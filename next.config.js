@@ -5,6 +5,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  excludeFile: str => /\*.[stories|test].tsx/.test(str),
 };
 
 module.exports = nextConfig;

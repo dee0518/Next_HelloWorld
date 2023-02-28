@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
-import SignIn from './index';
+import SignIn from '../pages/signin/index';
 
 export default {
   title: 'Page/SignIn',

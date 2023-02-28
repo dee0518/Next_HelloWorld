@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
 import { expect, jest } from '@storybook/jest';
+import React from 'react';
 import Button from './Button';
 
 export default {
@@ -33,12 +34,6 @@ Base.play = async ({ canvasElement }) => {
 export const Neon = Template.bind({});
 
 Neon.args = {
-  icon: {
-    src: '/assets/common/logo_hello_world',
-    alt: '테스트',
-    width: 24,
-    height: 24,
-  },
   color: '#252525',
   background: '#C5FB6D',
   children: <div>123</div>,
@@ -47,12 +42,6 @@ Neon.args = {
 export const Disabled = Template.bind({});
 
 Disabled.args = {
-  icon: {
-    src: '/assets/common/logo_hello_world',
-    alt: '테스트',
-    width: 24,
-    height: 24,
-  },
   color: '#252525',
   background: '#D9D9D9',
   children: <input />,
