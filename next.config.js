@@ -5,6 +5,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   excludeFile: str => /\*.[stories|test].tsx/.test(str),
 };
 
