@@ -17,6 +17,7 @@ ${normalize}
   button {
     border: none;
     cursor: pointer;
+    background: inherit;
   }
 `;
 
