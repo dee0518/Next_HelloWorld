@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
@@ -37,7 +37,7 @@ const Wrapper = styled.button<Props>`
   display: flex;
   align-items: center;
   justify-content: ${({ icon }) => (icon ? 'space-between' : 'center')};
-  width: ${({ width }) => width || '440px'};
+  width: ${({ width }) => width || '100%'};
   height: ${({ height }) => height || '54px'};
   border-radius: ${({ radius }) => radius || '12px'};
   color: ${({ color }) => color || '#000'};
