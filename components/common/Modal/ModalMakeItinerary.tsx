@@ -1,27 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import { flexbox } from '@/styles/mixin';
-import DateTIme from '@/components/common/ModalInput/DateTIme';
+import DateTIme from '@/components/common/ModalInput/DateTime';
 import TitleInput from '@/components/common/ModalInput/TitleInput';
 import SearchMemberInput from '../ModalInput/SearchMemberInput';
 import Calendar from '../../../public/assets/common/calendarIcon.png';
 import Search from '../../../public/assets/common/searchIcon.png';
+import { Icon } from '@/types/common/icon';
 
 const ModalMakeItinerary = () => {
   const ClickDateHandler = () => {};
   const SearchMemberHandler = () => {};
-  const calendarIcon = {
-    src: Calendar,
+
+  const calendarIcon: Icon = {
+    image: Calendar,
     alt: '달력',
     width: 20,
-    heigth: 20,
+    height: 20,
     color: 'gray',
   };
-  const searchIcon = {
-    src: Search,
+  const searchIcon: Icon = {
+    image: Search,
     alt: '검색',
     width: 20,
-    heigth: 20,
+    height: 20,
     color: 'gray',
   };
 

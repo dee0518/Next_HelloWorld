@@ -1,55 +1,57 @@
 import React from 'react';
 import styled from 'styled-components';
 import { flexbox } from '@/styles/mixin';
-import DateTIme from '@/components/common/ModalInput/DateTIme';
 import DestinationInfo from '@/components/common/ModalComponents/DestinationInfo';
-import AddedMember from '@/components/common/ModalComponents/AddedMember';
+import DateTime from '@/components/common/ModalInput/DateTime';
+// import AddedMember from '@/components/common/ModalComponents/AddedMember';
+// import Calendar from '@/assets/common/calendarIcon.png';
+import Calendar from '@/assets/common/calendarIcon.png';
+import Clock from '@/assets/common/clockIcon.png';
+import Search from '@/assets/common/searchIcon.png';
 import SearchMemberInput from '../ModalInput/SearchMemberInput';
-import Calendar from '../../../public/assets/common/calendarIcon.png';
-import Clock from '../../../public/assets/common/clockIcon.png';
-import Search from '../../../public/assets/common/searchIcon.png';
-import Profile from '../../../public/assets/common/profile.png';
+import { Icon } from '@/types/common/icon';
+// import Profile from '../../../public/assets/common/profile.png';
 
 const ModalEditItinerary = () => {
   const ClickDateHandler = () => {};
   const ClickTimeHandler = () => {};
   const SearchMemberHandler = () => {};
-  const calendarIcon = {
-    src: Calendar,
+  const calendarIcon: Icon = {
+    image: Calendar,
     alt: '달력',
     width: 20,
-    heigth: 20,
+    height: 20,
     color: 'gray',
   };
-  const clockIcon = {
-    src: Clock,
+  const clockIcon: Icon = {
+    image: Clock,
     alt: '시계',
     width: 20,
-    heigth: 20,
+    height: 20,
     color: 'gray',
   };
-  const searchIcon = {
-    src: Search,
+  const searchIcon: Icon = {
+    image: Search,
     alt: '검색',
     width: 20,
-    heigth: 20,
+    height: 20,
     color: 'gray',
   };
 
-  const profileinfo = {
-    src: Profile,
-    user: 'Dan',
-    alt: 'user',
-    width: 20,
-    heigth: 20,
-  };
+  // const profileinfo = {
+  //   image: Profile,
+  //   user: 'Dan',
+  //   alt: 'user',
+  //   width: 20,
+  //   height: 20,
+  // };
 
   return (
     <MakeContainer>
       <DestinationInfo />
       <DateContainer>
-        <DateTIme icon={calendarIcon} placeholder="출발일" onClick={ClickDateHandler} />
-        <DateTIme icon={clockIcon} placeholder="시간" onClick={ClickTimeHandler} />
+        <DateTime icon={calendarIcon} placeholder="출발일" onClick={ClickDateHandler} />
+        <DateTime icon={clockIcon} placeholder="시간" onClick={ClickTimeHandler} />
       </DateContainer>
       <SearchMemberInput
         placeholder="함께 여행할 사람의 닉네임을 검색해주세요."

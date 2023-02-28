@@ -1,17 +1,20 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import DateTIme from './DateTIme';
+
+import DateTime from './DateTime';
+import Calendar from '../../../public/assets/common/calendarIcon.png';
+import Search from '../../../public/assets/common/searchIcon.png';
 
 export default {
-  title: 'Common/DateTIme',
-  component: DateTIme,
-} as ComponentMeta<typeof DateTIme>;
+  title: 'Common/DateTime',
+  component: DateTime,
+} as ComponentMeta<typeof DateTime>;
 
-const Template: ComponentStory<typeof DateTIme> = args => <DateTIme {...args} />;
+const Template: ComponentStory<typeof DateTime> = args => <DateTime {...args} />;
 
 export const DepartureInput = Template.bind({});
 DepartureInput.args = {
   icon: {
-    src: '/assets/common/calendarIcon',
+    image: Calendar,
     alt: 'I',
     width: 24,
     height: 24,
@@ -23,7 +26,7 @@ DepartureInput.args = {
 export const ArrivalInput = Template.bind({});
 ArrivalInput.args = {
   icon: {
-    src: '/assets/common/calendarIcon',
+    image: Calendar,
     alt: 'I',
     width: 24,
     height: 24,
@@ -35,7 +38,7 @@ ArrivalInput.args = {
 export const TimeInput = Template.bind({});
 TimeInput.args = {
   icon: {
-    src: '/assets/common/calendarIcon',
+    image: Search,
     alt: 'I',
     width: 24,
     height: 24,

@@ -2,34 +2,27 @@ import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { flexbox } from '@/styles/mixin';
-
-type TIcon = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  color: string;
-};
+import { Icon } from '@/types/common/icon';
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
-  icon: TIcon;
+  icon: Icon;
   placeholder: string;
 }
 
-const DateTIme = (props: IProps) => {
+const DateTime = (props: IProps) => {
   const { placeholder, onClick, icon } = props;
   return (
     <DateTimeConatiner>
       <DateInput placeholder={placeholder} />
       <ImgContainer>
-        <Image onClick={onClick} src={icon.src} alt={icon.alt} width={`${icon.width}`} height={`${icon.height}`} />
+        <Image onClick={onClick} src={icon.image} alt={icon.alt} width={`${icon.width}`} height={`${icon.height}`} />
       </ImgContainer>
     </DateTimeConatiner>
   );
 };
 
-export default DateTIme;
+export default DateTime;
 
 const DateTimeConatiner = styled.div`
   width: 210px;

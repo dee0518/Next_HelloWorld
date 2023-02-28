@@ -2,18 +2,11 @@ import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { flexbox } from '@/styles/mixin';
-
-type TIcon = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  color: string;
-};
+import { Icon } from '@/types/common/icon';
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
-  icon: TIcon;
+  icon: Icon;
   placeholder: string;
 }
 
@@ -23,7 +16,7 @@ const SearchMemberInput = (props: IProps) => {
     <SearchContainer>
       <SearchInput type="text" placeholder={placeholder} />
       <ImgContainer onClick={onClick}>
-        <Image src={icon.src} alt={icon.alt} width={`${icon.width}`} height={`${icon.height}`} />
+        <Image src={icon.image} alt={icon.alt} width={`${icon.width}`} height={`${icon.height}`} />
       </ImgContainer>
     </SearchContainer>
   );
