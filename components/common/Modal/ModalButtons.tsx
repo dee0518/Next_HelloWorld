@@ -18,9 +18,9 @@ const ModalButtons = () => {
 
 export default ModalButtons;
 
-const ButtonContainer = styled.button`
+const ButtonContainer = styled.div`
   background: transparent;
-  ${flexbox('row')};
+  ${flexbox('row', 'center', 'center')};
   gap: 23px;
   margin: 0 auto;
 `;
