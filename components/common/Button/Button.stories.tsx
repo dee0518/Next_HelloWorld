@@ -19,7 +19,7 @@ Base.args = {
   background: '#464B68',
   children: 'test',
   onClick: () => {
-    alert('test');
+    // alert('test');
   },
 };
 
