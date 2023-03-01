@@ -58,7 +58,7 @@ describe('signin', () => {
 
         // await userEvent.type(passwordInput, '1q2w3e4r!Q');
         fireEvent.change(passwordInput, { target: { value: '1q2w3e4r!Q' } });
-        console.log((passwordInput as HTMLInputElement).value);
+        // console.log((passwordInput as HTMLInputElement).value);
 
         expect((passwordInput as HTMLInputElement).value).toMatch(PASSWORD_REG);
       });

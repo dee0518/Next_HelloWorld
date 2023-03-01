@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { ReactNode, ChangeEvent } from 'react';
 import styled from 'styled-components';
 
-type EventHandler = (e: any) => void;
+type EventHandler = (e: ChangeEvent) => void;
 
 type TProps = {
   id: string;

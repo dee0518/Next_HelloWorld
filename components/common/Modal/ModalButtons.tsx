@@ -6,10 +6,10 @@ import { flexbox } from '@/styles/mixin';
 const ModalButtons = () => {
   return (
     <ButtonContainer>
-      <Button onClick={() => alert('hi')} background="#D9D9D9" width="213px" height="54px" radius="10px">
+      <Button onClick={() => {}} background="#D9D9D9" width="213px" height="54px" radius="10px">
         취소
       </Button>
-      <Button onClick={() => alert('hi')} background="#C5FB6D" width="213px" height="54px" radius="10px">
+      <Button onClick={() => {}} background="#C5FB6D" width="213px" height="54px" radius="10px">
         새 일정 만들기
       </Button>
     </ButtonContainer>
