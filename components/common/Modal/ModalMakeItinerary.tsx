@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { flexbox } from '@/styles/mixin';
 import DateTIme from '@/components/common/ModalInput/DateTime';
 import TitleInput from '@/components/common/ModalInput/TitleInput';
-import SearchMemberInput from '../ModalInput/SearchMemberInput';
+import { Icon } from '@/types/common/icon';
 import Calendar from '../../../public/assets/common/calendarIcon.png';
 import Search from '../../../public/assets/common/searchIcon.png';
-import { Icon } from '@/types/common/icon';
+import SearchMemberInput from '../ModalInput/SearchMemberInput';
 
 const ModalMakeItinerary = () => {
   const ClickDateHandler = () => {};

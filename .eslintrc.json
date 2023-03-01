@@ -2,8 +2,13 @@
   "root": true,
   "overrides": [
     {
-      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-      "extends": ["plugin:testing-library/react"]
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": [
+        "plugin:testing-library/react"
+      ]
     }
   ],
   "env": {
@@ -25,10 +30,16 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": ["tsconfig.json"],
+    "project": [
+      "tsconfig.json"
+    ],
     "createDefaultProgram": true
   },
-  "plugins": ["react", "@typescript-eslint", "testing-library"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "testing-library"
+  ],
   "rules": {
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
@@ -40,18 +51,40 @@
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": ["arrow-function", "function-declaration"],
+        "namedComponents": [
+          "arrow-function",
+          "function-declaration"
+        ],
         "unnamedComponents": "arrow-function"
       }
     ],
-    "react/require-default-props": ["off"],
+    "react/require-default-props": [
+      "off"
+    ],
     "react/display-name": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-var-requires": "off",
     "jsx-a11y/label-has-associated-control": [
       2,
       {
-        "labelAttributes": ["htmlFor"]
+        "labelAttributes": [
+          "htmlFor"
+        ]
+      }
+    ],
+    "sort-imports": [
+      "off",
+      {
+        "ignoreCase": false,
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ],
+        "ignoreDeclarationSort": false,
+        "ignoreMemberSort": false,
+        "allowSeparatedGroups": false
       }
     ]
   }
