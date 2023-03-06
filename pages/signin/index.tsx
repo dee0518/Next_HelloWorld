@@ -55,7 +55,7 @@ const SignIn = () => {
         background="#464B68"
         color="#ffffff"
         onClick={() => {
-          alert('로그인 성공');
+          // alert('로그인 성공');
         }}
       >
         로그인

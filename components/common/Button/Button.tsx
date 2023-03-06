@@ -25,7 +25,7 @@ const Button = ({ children, onClick, icon, ...attributes }: Props) => {
       {children}
       {icon && (
         <IconWrapper>
-          <Image src={icon.src} alt={icon.alt} width={icon.width} height={icon.height} />
+          <Image src={icon.image} alt={icon.alt} width={icon.width} height={icon.height} />
         </IconWrapper>
       )}
     </Wrapper>
